@@ -20,7 +20,6 @@ def mergeTwoLists(l1, l2):
         l2 = l2.next
     tail = head
     while l1 is not None and l2 is not None:
-        # print(l1, l2)
         if l1.val < l2.val:
             tail.next = l1
             tail = tail.next
@@ -45,5 +44,4 @@ if __name__ == '__main__':
     assert(str(mergeTwoLists(a3, b3)) == '0, None')
     a1 = Node(1, Node(2, Node(4)))
     b1 = Node(1, Node(3, Node(4)))
-    # print(str(mergeTwoLists(a1, b1)))
     assert(str(mergeTwoLists(a1, b1)) == '1, 1, 2, 3, 4, 4, None')
