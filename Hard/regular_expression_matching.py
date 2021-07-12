@@ -1,7 +1,7 @@
 def isMatch(sequence, pattern):
     n_s = len(sequence) + 1
     n_p = len(pattern) + 1
-    matrix = [[False] * n_p for _ in range(n_s)]
+    matrix = [[False for _ in range(n_p)] for _ in range(n_s)]
     matrix[0][0] = True
     for p in range(2, n_p, 2):
         if matrix[0][p-2] and pattern[p-1] == '*':
